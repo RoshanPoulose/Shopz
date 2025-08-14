@@ -32,7 +32,7 @@ const Navbar = () => {
       <div className="hidden lg:flex gap-[45px]">
         <img
           src={asset.account}
-          alt=""
+          alt=""  
           className="h-[28px] w-[28px] cursor-pointer"
         />
         <img
