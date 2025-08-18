@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+
 const Footer = () => {
   return (
     <div className="border px-[7%]  border-t-gray-200 pt-40px">
@@ -12,9 +13,9 @@ const Footer = () => {
           <div className="flex flex-col gap-[55px] w-[50%]">  
             <div className="text-[16px] text-gray-400">Link</div>          
             <div className="flex flex-col gap-[45px]">    
-              <NavLink to="/" className=" ">               
+              <NavLink to="/" className=" ">                 
                 <p className="font-medium text-[16px]">Home</p>  
-              </NavLink>      
+              </NavLink>       
               <NavLink to={"/shop"} className="flex gap-2">
                 <p>Shop</p>          
               </NavLink>    

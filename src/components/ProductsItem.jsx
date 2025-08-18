@@ -4,21 +4,22 @@ import { Link } from "react-router-dom";
 import { asset } from "../assets/asset";
 const ProductsItem = ({
   id,
-  image,
+  imagess,
   name,
   price,  
-  ogprice,
+  ogprice, 
   discountprice,
-  description,
+  description, 
 }) => {
   const { currency } = useContext(ShopContext);
+  
   return (
     <Link to={`/product/${id}`}>    
       <div className="group relative">
-        <div className="relative overflow-hidden aspect-[285/301]" >
+        <div className="relative overflow-hidden aspect-[285/301]" >  
           <img  
-            src={image}      
-            alt=""
+            src={imagess?.[0]}      
+            alt=""  
             className="w-full hover:scale-110 transition ease-in-out" 
           />  
           {discountprice !== 0 && (

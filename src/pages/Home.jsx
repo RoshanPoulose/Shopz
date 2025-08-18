@@ -14,7 +14,7 @@ const Home = () => {
      <OurProduct />  
      <SildeProducts />   
      <Furnitures />   
-     <Footer />
+   
     </div>
   )  
 }        

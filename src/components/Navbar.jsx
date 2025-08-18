@@ -23,12 +23,12 @@ const Navbar = () => {
         <NavLink to={"/about"} className="flex gap-2">
           <p>About</p>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
-        </NavLink>
+        </NavLink>   
         <NavLink to={"/contact"} className="flex gap-2">
           <p>Contact</p>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
-        </NavLink>
-      </ul>
+        </NavLink>  
+      </ul>    
       <div className="hidden lg:flex gap-[45px]">
         <img
           src={asset.account}

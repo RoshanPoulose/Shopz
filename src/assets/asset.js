@@ -11,7 +11,7 @@ import living from "./living.png";
 import dinnig from "./dinnig.png";
 import arrow from "./img/arrow.png";
 import heart2 from "./img/heart2.png";
-import inner from "./img/innerpeace.png"
+import inner from "./img/innerpeace.png";
 import vector from "./img/Vector.png";
 import line from "./img/line.jpg";
 import bd1 from "./img/bd1.jpg";
@@ -35,7 +35,7 @@ import p1 from "./img/p1.png";
 import p2 from "./img/p2.png";
 import p3 from "./img/p3.png";
 import p4 from "./img/p4.png";
-import p5 from "./img/p5.png";  
+import p5 from "./img/p5.png";
 import p6 from "./img/p6.png";
 import p7 from "./img/p7.png";
 import p8 from "./img/p8.png";
@@ -46,9 +46,23 @@ import f3 from "./img/f3.png";
 import f4 from "./img/f4.png";
 import f5 from "./img/f5.png";
 import f6 from "./img/f6.png";
-import f7 from "./img/f7.png";    
+import f7 from "./img/f7.png";
 import f8 from "./img/f8.png";
 import f9 from "./img/f9.png";
+import shop from "./img/shop.png";
+import grid from "./img/grid.png";
+import filter from "./img/filter.png";
+import viewlist from "./img/viewlist.png";
+import customersupport from "./img/customer-support.png";
+import shipping from "./img/shipping.png";
+import trophy from "./img/trophy.png";
+import guarante from "./img/guarante.png";
+import arrowblack from "./img/arrowblack.png";
+import fb from "./img/fb.png";
+import li from "./img/li.png";
+import tw from "./img/tw.png";
+import sofa from "./img/sofa1.png";
+import sofa2 from "./img/sofa2.png";
 
 export const asset = {
   logo,
@@ -81,63 +95,94 @@ export const asset = {
   lv3,
   ud1,
   ud2,
-  ud3,  
-  patio,  
+  ud3,
+  patio,
   right,
-  f1,f2,f3,f4,f5,f6,f7,f8,f9  
+  f1,
+  f2,
+  f3,
+  f4,
+  f5,
+  f6,
+  f7,
+  f8,
+  f9,
+  shop,
+  grid,
+  filter,
+  viewlist,
+  shipping,
+  trophy,
+  customersupport,
+  guarante,
+  arrowblack,
+  fb,
+  li,
+  tw,
+  sofa,
+  sofa2
 };
 
+export const cat = [
+  {
+    name: "Categoires",
+    thing: [
+      "Living",
+      "Dining",
+      "Outdoor",
+      "Lighting",
+      "Kitchen",
+      "Decor",
+      "Office",
+      "Bedroom",
+      "Storage",
+    ],
+  },
+  {
+    name: "Price",
+    thing: [
+      { label: "Under Rp 500,000", min: 0, max: 500000 },
+      { label: "Rp 500,001 - Rp 2,000,000", min: 500001, max: 2000000 },
+      { label: "Rp 2,000,001 - Rp 5,000,000", min: 2000001, max: 5000000 },
+      { label: "Rp 5,000,001 - Rp 10,000,000", min: 5000001, max: 10000000 },
+      { label: "Above Rp 10,000,000", min: 10000001, max: Infinity },
+    ],
+  }, 
+  {
+    name:"size",
+    thing:["S", "L", "XL", "XXL","M"]
+  }
+];
 export const slides = [
   {
     id: 1,
     title: "Bed Room",
-    subtitle: "Inner peace",  
-    images: [
-      asset.inner,
-      bd1,
-      bd2,
-      bd3
-    ]
+    subtitle: "Inner peace",
+    images: [asset.inner, bd1, bd2, bd3],
   },
   {
     id: 2,
     title: "Dining Room",
     subtitle: "Family time",
-    images: [
-      asset.dinner,
-      dr1,
-      dr2,
-      dr3,
-    ]
+    images: [asset.dinner, dr1, dr2, dr3],
   },
   {
     id: 3,
     title: "Living Room",
     subtitle: "Cozy gatherings",
-    images: [
-      asset.living, 
-      lv1,
-      lv2,
-      lv3
-    ]
+    images: [asset.living, lv1, lv2, lv3],
   },
   {
     id: 4,
     title: "Outdoor Patio",
     subtitle: "Breathe fresh",
-    images: [
-      asset.patio,
-      ud1,
-      ud2,
-      ud3
-    ]
-  }
+    images: [asset.patio, ud1, ud2, ud3],
+  },
 ];
-
 
 export const products = [
   {
-    id: 1,  
+    id: 1,
     title: "Syltherine",
     category: "Living",
     shortDescription: "Stylish cafe chair",
@@ -146,8 +191,14 @@ export const products = [
     price: 2500000,
     originalPrice: 3500000,
     discountPercent: 30,
-    image: p1,
+    imagess: [p1, p2, p3, p4],
     badge: "30% Off",
+    rating: 4.5,
+    reviews: 5,
+    sizes: ["S", "M", "L"],
+    colors: ["#000000", "#7B3F00", "#D4AF37"],
+    sku: "STLCHR-001",
+    tags: ["Chair", "Cafe", "Living Room", "Wood", "Fabric"],
     comparison: {
       salesPackage: "1 cafe chair",
       modelNumber: "STLCHR-001",
@@ -182,8 +233,14 @@ export const products = [
     price: 2500000,
     originalPrice: 2500000,
     discountPercent: 0,
-    image: p2,
+    imagess: [p2, p1, p3, p4],
     badge: null,
+    rating: 4.2,
+    reviews: 12,
+    sizes: ["M", "L"],
+    colors: ["#E6D8AD", "#8B4513"],
+    sku: "LVSDN-002",
+    tags: ["Chair", "Dining", "Wood", "Leather"],
     comparison: {
       salesPackage: "1 dining chair",
       modelNumber: "LVSDN-002",
@@ -218,8 +275,14 @@ export const products = [
     price: 7000000,
     originalPrice: 14000000,
     discountPercent: 50,
-    image: p3,
+    imagess: [p3, p1, p3, p4],
     badge: "50% Off",
+    rating: 4.8,
+    reviews: 22,
+    sizes: ["L", "XL"],
+    colors: ["#D3D3D3", "#A9A9A9"],
+    sku: "LLT-LVX-003",
+    tags: ["Sofa", "Luxury", "Living Room"],
     comparison: {
       salesPackage: "1 big sofa",
       modelNumber: "LLT-LVX-003",
@@ -255,8 +318,14 @@ export const products = [
     price: 500000,
     originalPrice: 500000,
     discountPercent: 0,
-    image: p4,
+    imagess: [p4, p1, p3, p2],
     badge: "New",
+    rating: 4.0,
+    reviews: 8,
+    sizes: ["S", "L", "XL"],
+    colors: ["#C19A6B", "#556B2F"],
+    sku: "RSPR-004",
+    tags: ["Outdoor", "Table", "Stool", "Garden"],
     comparison: {
       salesPackage: "1 table + 2 stools",
       modelNumber: "RSPR-004",
@@ -291,8 +360,14 @@ export const products = [
     price: 1500000,
     originalPrice: 1500000,
     discountPercent: 0,
-    image: p5,
+    imagess: [p5, p1, p3, p4],
     badge: null,
+    rating: 4.3,
+    reviews: 19,
+    sizes: ["S", "L", "XL", "XXL"],
+    colors: ["#FFFFFF", "#F5F5DC"],
+    sku: "GRF-LMP-005",
+    tags: ["Lamp", "Lighting", "Decor"],
     comparison: {
       salesPackage: "1 night lamp",
       modelNumber: "GRF-LMP-005",
@@ -327,8 +402,14 @@ export const products = [
     price: 150000,
     originalPrice: 150000,
     discountPercent: 0,
-    image: p6,
+    imagess: [p6, p1, p3, p4],
     badge: "New",
+    rating: 4.1,
+    reviews: 10,
+    sizes: ["S", "L", "XXL"],
+    colors: ["#FFFFFF", "#C0C0C0"],
+    sku: "MGG-MUG-006",
+    tags: ["Mug", "Ceramic", "Kitchen"],
     comparison: {
       salesPackage: "1 mug",
       modelNumber: "MGG-MUG-006",
@@ -363,8 +444,14 @@ export const products = [
     price: 7000000,
     originalPrice: 14000000,
     discountPercent: 50,
-    image: p7,
+    imagess: [p7, p1, p3, p4],
     badge: "50% Off",
+    rating: 4.7,
+    reviews: 16,
+    sizes: ["Queen", "King"],
+    colors: ["#FFC0CB", "#FF69B4"],
+    sku: "PNKY-BED-007",
+    tags: ["Bed", "Bedroom", "Living Room"],
     comparison: {
       salesPackage: "1 bed set",
       modelNumber: "PNKY-BED-007",
@@ -399,8 +486,14 @@ export const products = [
     price: 500000,
     originalPrice: 700000,
     discountPercent: 28,
-    image: p8,
+    imagess: [p8, p1, p3, p4],
     badge: "New",
+    rating: 4.4,
+    reviews: 14,
+    sizes: ["L", "XL", "XXL"],
+    colors: ["#FFFFFF", "#E0E0E0"],
+    sku: "PTTY-DEC-008",
+    tags: ["Pot", "Decor", "Plant"],
     comparison: {
       salesPackage: "1 flower pot",
       modelNumber: "PTTY-DEC-008",
@@ -435,9 +528,19 @@ export const products = [
     price: 3500000,
     originalPrice: 5000000,
     discountPercent: 30,
-    image:
+    imagess: [
       "https://ak1.ostkcdn.com/images/products/is/images/direct/2463b67401384dcf4188fbd0a14a185050d0dc4c/FM-Furniture-Aurora-Writing-Computer-Desk-with-Ample-Work-Surface.jpg?impolicy=medium",
+      p5,
+      p1,
+      p3,
+    ],
     badge: "30% Off",
+    rating: 4.4,
+    reviews: 22,
+    sizes: ["S", "L", "XL", "XXL"],
+    colors: ["#8B4513", "#A0522D"],
+    sku: "AUR-DSK-009",
+    tags: ["Desk", "Office", "Wooden"],
     comparison: {
       salesPackage: "1 work desk",
       modelNumber: "AUR-DSK-009",
@@ -472,9 +575,19 @@ export const products = [
     price: 6000000,
     originalPrice: 9000000,
     discountPercent: 33,
-    image:
+    imagess: [
       "https://img-us.aosomcdn.com/thumbnail/100/n0/product/2024/09/19/RGM9aa192094777b7.jpg",
+      p5,
+      p1,
+      p3,
+    ],
     badge: "33% Off",
+    rating: 4.6,
+    reviews: 35,
+    sizes: ["S", "XXL"],
+    colors: ["#87CEEB", "#4682B4"],
+    sku: "CLDY-SFA-010",
+    tags: ["Sofa", "Living", "Comfort"],
     comparison: {
       salesPackage: "1 three-seater sofa",
       modelNumber: "CLDY-SFA-010",
@@ -509,8 +622,19 @@ export const products = [
     price: 9500000,
     originalPrice: 12000000,
     discountPercent: 21,
-    image: "https://mydeem.ca/cdn/shop/files/16-_1.png?v=1691878819",
+    imagess: [
+      "https://mydeem.ca/cdn/shop/files/16-_1.png?v=1691878819",
+      p5,
+      p1,
+      p3,
+    ],
     badge: "21% Off",
+    rating: 4.7,
+    reviews: 42,
+    sizes: ["S", "L", "XL", "XXL"],
+    colors: ["#2F4F4F", "#696969"],
+    sku: "NMB-BED-011",
+    tags: ["Bed", "Bedroom", "Comfort"],
     comparison: {
       salesPackage: "1 king bed",
       modelNumber: "NMB-BED-011",
@@ -545,9 +669,19 @@ export const products = [
     price: 2800000,
     originalPrice: 3500000,
     discountPercent: 20,
-    image:
+    imagess: [
       "https://ashleychilders.com/cdn/shop/files/ashley-childers-luna-bookshelf-1.jpg?v=1702278669",
+      p5,
+      p1,
+      p3,
+    ],
     badge: "20% Off",
+    rating: 4.2,
+    reviews: 18,
+    sizes: ["S", "XL", "XXL"],
+    colors: ["#DEB887", "#D2B48C"],
+    sku: "LNA-SHF-012",
+    tags: ["Shelf", "Storage", "Wood"],
     comparison: {
       salesPackage: "1 shelf unit",
       modelNumber: "LNA-SHF-012",
@@ -582,8 +716,19 @@ export const products = [
     price: 8500000,
     originalPrice: 11000000,
     discountPercent: 23,
-    image: "https://images.unsplash.com/photo-1600566752355-35792bedcfea",
+    imagess: [
+      "https://images.unsplash.com/photo-1600566752355-35792bedcfea",
+      p5,
+      p1,
+      p3,
+    ],
     badge: "23% Off",
+    rating: 4.5,
+    reviews: 28,
+    sizes: ["S", "L", "XL", "XXL"],
+    colors: ["#8B4513", "#654321"],
+    sku: "ECL-DIN-013",
+    tags: ["Dining", "Table", "Chairs"],
     comparison: {
       salesPackage: "1 table + 6 chairs",
       modelNumber: "ECL-DIN-013",
@@ -601,25 +746,36 @@ export const products = [
         seatHeight: "45 cm",
         legHeight: "72 cm",
       },
-      warranty: { 
+      warranty: {
         summary: "1 year manufacturing warranty",
-        serviceType: "On-site", 
-        covered: "Manufacturing defects only",   
+        serviceType: "On-site",
+        covered: "Manufacturing defects only",
         notCovered: "Water stains",
       },
     },
   },
-  {  
-    id: 14,    
-    title: "Solaris Lamp", 
+  {
+    id: 14,
+    title: "Solaris Lamp",
     category: "Lighting",
     shortDescription: "Tall standing lamp",
     description: "Elegant floor lamp with warm ambient lighting.",
     price: 1800000,
     originalPrice: 2200000,
     discountPercent: 18,
-    image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4",
+    imagess: [
+      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4",
+      p5,
+      p1,
+      p3,
+    ],
     badge: "18% Off",
+    rating: 4.3,
+    reviews: 16,
+    sizes: ["S", "L", "XL", "XXL"],
+    colors: ["#000000", "#808080"],
+    sku: "SLR-LMP-014",
+    tags: ["Lamp", "Lighting", "Decor"],
     comparison: {
       salesPackage: "1 standing lamp",
       modelNumber: "SLR-LMP-014",
@@ -654,9 +810,19 @@ export const products = [
     price: 3200000,
     originalPrice: 4200000,
     discountPercent: 24,
-    image:
+    imagess: [
       "https://cane-line.com/cdn/shop/files/Breeze_5468LT_5469LT_5567LT_292_2fa95ae5-368b-4dd5-bb07-36eae9037fb9_2048x.jpg?v=1749095025",
+      p5,
+      p1,
+      p3,
+    ],
     badge: "24% Off",
+    rating: 4.4,
+    reviews: 19,
+    sizes: ["XL", "XXL"],
+    colors: ["#F5F5DC", "#D2B48C"],
+    sku: "BRZ-CHR-015",
+    tags: ["Chair", "Armchair", "Living"],
     comparison: {
       salesPackage: "1 armchair",
       modelNumber: "BRZ-CHR-015",
@@ -692,9 +858,19 @@ export const products = [
     price: 8500000,
     originalPrice: 10200000,
     discountPercent: 17,
-    image:
+    imagess: [
       "https://i5.walmartimages.com/asr/56da074d-32d2-494e-8bfa-720a79d831ed.5a3b435662f61af73ee194fb3ce68f46.jpeg?odnBg=FFFFFF&odnHeight=768&odnWidth=768",
+      p5,
+      p1,
+      p3,
+    ],
     badge: "17% Off",
+    rating: 4.5,
+    reviews: 22,
+    sizes: ["L", "XL"],
+    colors: ["#DEB887", "#8B4513"],
+    sku: "AUR-CNB-016",
+    tags: ["Bed", "Canopy", "Bedroom"],
     comparison: {
       salesPackage: "1 bed frame with canopy",
       modelNumber: "AUR-CNB-016",
@@ -716,9 +892,9 @@ export const products = [
         summary: "3 years structural warranty",
         serviceType: "On-site",
         covered: "Manufacturing defects only",
-        notCovered: "Wear and tear",  
+        notCovered: "Wear and tear",
       },
-    },  
+    },
   },
   {
     id: 17,
@@ -730,9 +906,19 @@ export const products = [
     price: 1500000,
     originalPrice: 1900000,
     discountPercent: 21,
-    image:
+    imagess: [
       "https://m.media-amazon.com/images/I/810p61bqR8L.jpg",
+      p5,
+      p1,
+      p3,
+    ],
     badge: "21% Off",
+    rating: 4.2,
+    reviews: 14,
+    sizes: ["M", "L"],
+    colors: ["#000000", "#654321"],
+    sku: "ZNW-ORG-017",
+    tags: ["Organizer", "Storage", "Wall-mounted"],
     comparison: {
       salesPackage: "1 organizer",
       modelNumber: "ZNW-ORG-017",
@@ -767,10 +953,20 @@ export const products = [
       "Sink into comfort with this extra-plush lounge chair designed for all-day relaxation.",
     price: 3900000,
     originalPrice: 4900000,
-    discountPercent: 20,  
-    image:
+    discountPercent: 20,
+    imagess: [
       "https://ninetwofive.com.au/wp-content/uploads/2023/06/Cloud_hero-900x900.png",
+      p5,
+      p1,
+      p3,
+    ],
     badge: "20% Off",
+    rating: 4.6,
+    reviews: 28,
+    sizes: ["XL", "XXL"],
+    colors: ["#D3D3D3", "#A9A9A9"],
+    sku: "CLN-LNG-018",
+    tags: ["Chair", "Lounge", "Living"],
     comparison: {
       salesPackage: "1 lounge chair",
       modelNumber: "CLN-LNG-018",
@@ -786,7 +982,7 @@ export const products = [
         depth: "95 cm",
         weight: "20 kg",
         seatHeight: "45 cm",
-        legHeight: "15 cm",  
+        legHeight: "15 cm",
       },
       warranty: {
         summary: "2 years manufacturing warranty",
@@ -797,221 +993,292 @@ export const products = [
     },
   },
   {
-  id: 19,
-  title: "Harbor Coffee Table",
-  category: "Living",
-  shortDescription: "Rustic wooden coffee table",
-  description: "A solid wood coffee table with a warm finish and a lower storage shelf.",
-  price: 2100000,
-  originalPrice: 2700000,
-  discountPercent: 22,
-  image: "https://images.openai.com/thumbnails/3ea0565585c820baccaa5916feceda80.webp",
-  badge: "22% Off",
-  comparison: {
-    salesPackage: "1 coffee table",
-    modelNumber: "HRB-CFT-019",
-    material: "Solid Oak Wood",
-    color: "Walnut Brown",
-    fillingMaterial: "N/A",
-    finishType: "Matte",
-    maxLoad: "80 kg",
-    origin: "Malaysia",
-    dimensions: {
-      width: "110 cm",
-      height: "45 cm",
-      depth: "60 cm",
-      weight: "15 kg",
-      seatHeight: "N/A",
-      legHeight: "20 cm"
+    id: 19,
+    title: "Harbor Coffee Table",
+    category: "Living",
+    shortDescription: "Rustic wooden coffee table",
+    description:
+      "A solid wood coffee table with a warm finish and a lower storage shelf.",
+    price: 2100000,
+    originalPrice: 2700000,
+    discountPercent: 22,
+    imagess: [
+      "https://images.openai.com/thumbnails/3ea0565585c820baccaa5916feceda80.webp",
+      p5,
+      p1,
+      p3,
+    ],
+    badge: "22% Off",
+    rating: 4.3,
+    reviews: 17,
+    sizes: ["M", "L"],
+    colors: ["#5C4033", "#8B4513"],
+    sku: "HRB-CFT-019",
+    tags: ["Table", "Coffee Table", "Living"],
+    comparison: {
+      salesPackage: "1 coffee table",
+      modelNumber: "HRB-CFT-019",
+      material: "Solid Oak Wood",
+      color: "Walnut Brown",
+      fillingMaterial: "N/A",
+      finishType: "Matte",
+      maxLoad: "80 kg",
+      origin: "Malaysia",
+      dimensions: {
+        width: "110 cm",
+        height: "45 cm",
+        depth: "60 cm",
+        weight: "15 kg",
+        seatHeight: "N/A",
+        legHeight: "20 cm",
+      },
+      warranty: {
+        summary: "1 year warranty",
+        serviceType: "Replacement",
+        covered: "Manufacturing defects",
+        notCovered: "Water stains",
+      },
     },
-    warranty: {
-      summary: "1 year warranty",
-      serviceType: "Replacement",
-      covered: "Manufacturing defects",
-      notCovered: "Water stains"
-    }
-  }
-},
-{
-  id: 20,
-  title: "Eclipse Floor Lamp",
-  category: "Lighting",
-  shortDescription: "Minimalist arc floor lamp",
-  description: "A sleek floor lamp with a curved metal frame and soft warm light.",
-  price: 950000,
-  originalPrice: 1300000,
-  discountPercent: 27,
-  image: "https://studioaurawala.com/wp-content/uploads/2023/12/ECLIPSE-FLOOR-LAMP-_Studio-Aurawala-Product-Photos-Luxury-Furniture-morden-design-mumbai-2.webp",
-  badge: "27% Off",
-  comparison: {
-    salesPackage: "1 floor lamp",
-    modelNumber: "ECL-FLP-020",
-    material: "Metal & Fabric Shade",
-    color: "Matte Black",
-    fillingMaterial: "N/A",
-    finishType: "Powder Coated",
-    maxLoad: "N/A",
-    origin: "China",
-    dimensions: {
-      width: "40 cm",
-      height: "180 cm",
-      depth: "60 cm",
-      weight: "6 kg",
-      seatHeight: "N/A",
-      legHeight: "N/A"
+  },
+  {
+    id: 20,
+    title: "Eclipse Floor Lamp",
+    category: "Lighting",
+    shortDescription: "Minimalist arc floor lamp",
+    description:
+      "A sleek floor lamp with a curved metal frame and soft warm light.",
+    price: 950000,
+    originalPrice: 1300000,
+    discountPercent: 27,
+    imagess: [
+      "https://studioaurawala.com/wp-content/uploads/2023/12/ECLIPSE-FLOOR-LAMP-_Studio-Aurawala-Product-Photos-Luxury-Furniture-morden-design-mumbai-2.webp",
+      p5,
+      p1,
+      p3,
+    ],
+    badge: "27% Off",
+    rating: 4.1,
+    reviews: 11,
+    sizes: ["S", "M"],
+    colors: ["#000000", "#C0C0C0"],
+    sku: "ECL-FLP-020",
+    tags: ["Lamp", "Lighting", "Floor Lamp"],
+    comparison: {
+      salesPackage: "1 floor lamp",
+      modelNumber: "ECL-FLP-020",
+      material: "Metal & Fabric Shade",
+      color: "Matte Black",
+      fillingMaterial: "N/A",
+      finishType: "Powder Coated",
+      maxLoad: "N/A",
+      origin: "China",
+      dimensions: {
+        width: "40 cm",
+        height: "180 cm",
+        depth: "60 cm",
+        weight: "6 kg",
+        seatHeight: "N/A",
+        legHeight: "N/A",
+      },
+      warranty: {
+        summary: "6 months warranty",
+        serviceType: "Replacement",
+        covered: "Electrical defects",
+        notCovered: "Bulb",
+      },
     },
-    warranty: {
-      summary: "6 months warranty",
-      serviceType: "Replacement",
-      covered: "Electrical defects",
-      notCovered: "Bulb"
-    }
-  }
-},
-{
-  id: 21,
-  title: "Summit Dining Table",
-  category: "Dining",
-  shortDescription: "Six-seater dining table",
-  description: "A spacious dining table with a smooth wooden surface and sturdy legs.",
-  price: 5200000,
-  originalPrice: 6400000,
-  discountPercent: 19,
-  image: "https://cdn.woodysfurniturestores.com/wp-content/uploads/2023/10/BF-Summit-Dining-Set.jpg",
-  badge: "19% Off",
-  comparison: {
-    salesPackage: "1 dining table",
-    modelNumber: "SMT-DTB-021",
-    material: "Teak Wood",
-    color: "Natural Brown",
-    fillingMaterial: "N/A",
-    finishType: "Glossy",
-    maxLoad: "200 kg",
-    origin: "Indonesia",
-    dimensions: {
-      width: "180 cm",
-      height: "75 cm",
-      depth: "90 cm",
-      weight: "40 kg",
-      seatHeight: "N/A",
-      legHeight: "72 cm"
-    },
-    warranty: {
-      summary: "2 years warranty",
-      serviceType: "On-site",
-      covered: "Manufacturing defects",
-      notCovered: "Scratches"
-    }
-  }
-},
-{
-  id: 22,
-  title: "Crescent Bookshelf",
-  category: "Storage",
-  shortDescription: "Curved five-tier bookshelf",
-  description: "A stylish curved bookshelf perfect for displaying books and décor.",
-  price: 2400000,
-  originalPrice: 3000000,
-    discountPercent: 20,
-    image: "https://m.media-amazon.com/images/I/71TwDDg8wNL.jpg",
-  badge: "20% Off",
-  comparison: {
-    salesPackage: "1 bookshelf",
-    modelNumber: "CRS-BSH-022",
-    material: "Engineered Wood",
-    color: "Walnut",
-    fillingMaterial: "N/A",
-    finishType: "Matte",
-    maxLoad: "60 kg",
-    origin: "Vietnam",
-    dimensions: {
-      width: "90 cm",
-      height: "180 cm",
-      depth: "30 cm",
-      weight: "25 kg",
-      seatHeight: "N/A",
-      legHeight: "5 cm"
-    },
-    warranty: {
-      summary: "1 year warranty",
-      serviceType: "Replacement",
-      covered: "Manufacturing defects",
-      notCovered: "Water damage"
-    }
-  }
-},
-{
-  id: 23,
-  title: "Haven Recliner",
-  category: "Living",
-  shortDescription: "Plush reclining armchair",
-  description: "An ergonomic recliner chair with soft cushioning for maximum comfort.",
-  price: 4800000,
-  originalPrice: 5900000,
-  discountPercent: 19,
-  image: "https://m.media-amazon.com/images/I/71TwDDg8wNL.jpg",
-  badge: "19% Off",
-  comparison: {
-    salesPackage: "1 recliner chair",
-    modelNumber: "HVN-RCL-023",
-    material: "Leatherette & Wood",
-    color: "Dark Brown",
-    fillingMaterial: "Foam",
-    finishType: "Matte",
-    maxLoad: "140 kg",
-    origin: "Malaysia",
-    dimensions: {
-      width: "90 cm",
-      height: "105 cm",
-      depth: "95 cm",
-      weight: "28 kg",
-      seatHeight: "45 cm",
-      legHeight: "12 cm"
-    },
-    warranty: {
-      summary: "1 year warranty",
-      serviceType: "On-site",
-      covered: "Structural defects",
-      notCovered: "Leather cracks"
-    }
-  }
-},
-{
-  id: 24,
-  title: "Aurora Desk",
-  category: "Office",    
-  shortDescription: "Modern minimalist work desk",
-  description: "A clean and functional desk ideal for home offices and study rooms.",
-  price: 2700000,  
-  originalPrice: 3500000,
-  discountPercent: 23,
-  image: "https://m.media-amazon.com/images/I/71TwDDg8wNL.jpg",
-  badge: "23% Off",
-  comparison: {
-    salesPackage: "1 desk",
-    modelNumber: "AUR-DSK-024",
-    material: "Engineered Wood & Metal",
-    color: "White & Oak",
-    fillingMaterial: "N/A",
-    finishType: "Matte",
-    maxLoad: "100 kg",
-    origin: "Vietnam",
-    dimensions: {
-      width: "120 cm",
-      height: "75 cm",
-      depth: "60 cm",
-      weight: "20 kg",
-      seatHeight: "N/A",
-      legHeight: "72 cm"
-    },
-    warranty: {
-      summary: "1 year warranty",
-      serviceType: "Replacement",
-      covered: "Manufacturing defects",
-      notCovered: "Scratches"
-    }
-  }
-}
+  },
 
+  {
+    id: 21,
+    title: "Summit Dining Table",
+    category: "Dining",
+    shortDescription: "Six-seater dining table",
+    description:
+      "A spacious dining table with a smooth wooden surface and sturdy legs.",
+    price: 5200000,
+    originalPrice: 6400000,
+    discountPercent: 19,
+    imagess: [
+      "https://cdn.woodysfurniturestores.com/wp-content/uploads/2023/10/BF-Summit-Dining-Set.jpg",
+      p5,
+      p1,
+      p3,
+    ],
+    badge: "19% Off",
+    rating: 4.3,
+    reviews: 28,
+    sizes: ["XL"],
+    colors: ["#8B4513", "#A0522D"],
+    sku: "SMT-DTB-021",
+    tags: ["Dining", "Table", "Wooden"],
+    comparison: {
+      salesPackage: "1 dining table",
+      modelNumber: "SMT-DTB-021",
+      material: "Teak Wood",
+      color: "Natural Brown",
+      fillingMaterial: "N/A",
+      finishType: "Glossy",
+      maxLoad: "200 kg",
+      origin: "Indonesia",
+      dimensions: {
+        width: "180 cm",
+        height: "75 cm",
+        depth: "90 cm",
+        weight: "40 kg",
+        seatHeight: "N/A",
+        legHeight: "72 cm",
+      },
+      warranty: {
+        summary: "2 years warranty",
+        serviceType: "On-site",
+        covered: "Manufacturing defects",
+        notCovered: "Scratches",
+      },
+    },
+  },
+  {
+    id: 22,
+    title: "Crescent Bookshelf",
+    category: "Storage",
+    shortDescription: "Curved five-tier bookshelf",
+    description:
+      "A stylish curved bookshelf perfect for displaying books and décor.",
+    price: 2400000,
+    originalPrice: 3000000,
+    discountPercent: 20,
+    imagess: [
+      "https://m.media-amazon.com/images/I/71TwDDg8wNL.jpg",
+      p5,
+      p1,
+      p3,
+    ],
+    badge: "20% Off",
+    rating: 4.2,
+    reviews: 18,
+    sizes: ["M"],
+    colors: ["#654321", "#8B5E3C"],
+    sku: "CRS-BSH-022",
+    tags: ["Bookshelf", "Storage", "Wooden"],
+    comparison: {
+      salesPackage: "1 bookshelf",
+      modelNumber: "CRS-BSH-022",
+      material: "Engineered Wood",
+      color: "Walnut",
+      fillingMaterial: "N/A",
+      finishType: "Matte",
+      maxLoad: "60 kg",
+      origin: "Vietnam",
+      dimensions: {
+        width: "90 cm",
+        height: "180 cm",
+        depth: "30 cm",
+        weight: "25 kg",
+        seatHeight: "N/A",
+        legHeight: "5 cm",
+      },
+      warranty: {
+        summary: "1 year warranty",
+        serviceType: "Replacement",
+        covered: "Manufacturing defects",
+        notCovered: "Water damage",
+      },
+    },
+  },
+  {
+    id: 23,
+    title: "Haven Recliner",
+    category: "Living",
+    shortDescription: "Plush reclining armchair",
+    description:
+      "An ergonomic recliner chair with soft cushioning for maximum comfort.",
+    price: 4800000,
+    originalPrice: 5900000,
+    discountPercent: 19,
+    imagess: [
+      "https://m.media-amazon.com/images/I/71TwDDg8wNL.jpg",
+      p5,
+      p1,
+      p3,
+    ],
+    badge: "19% Off",
+    rating: 4.5,
+    reviews: 34,
+    sizes: ["M", "XL"],
+    colors: ["#3B2F2F", "#4B3621"],
+    sku: "HVN-RCL-023",
+    tags: ["Chair", "Recliner", "Living"],
+    comparison: {
+      salesPackage: "1 recliner chair",
+      modelNumber: "HVN-RCL-023",
+      material: "Leatherette & Wood",
+      color: "Dark Brown",
+      fillingMaterial: "Foam",
+      finishType: "Matte",
+      maxLoad: "140 kg",
+      origin: "Malaysia",
+      dimensions: {
+        width: "90 cm",
+        height: "105 cm",
+        depth: "95 cm",
+        weight: "28 kg",
+        seatHeight: "45 cm",
+        legHeight: "12 cm",
+      },
+      warranty: {
+        summary: "1 year warranty",
+        serviceType: "On-site",
+        covered: "Structural defects",
+        notCovered: "Leather cracks",
+      },
+    },
+  },
+  {
+    id: 24,
+    title: "Aurora Desk",
+    category: "Office",
+    shortDescription: "Modern minimalist work desk",
+    description:
+      "A clean and functional desk ideal for home offices and study rooms.",
+    price: 2700000,
+    originalPrice: 3500000,
+    discountPercent: 23,
+    imagess: [
+      "https://m.media-amazon.com/images/I/71TwDDg8wNL.jpg",
+      p5,
+      p1,
+      p3,
+    ],
+    badge: "23% Off",
+    rating: 4.1,
+    reviews: 22,
+    sizes: ["M", "XL"],
+    colors: ["#FFFFFF", "#D2B48C"],
+    sku: "AUR-DSK-024",
+    tags: ["Desk", "Office", "Workstation"],
+    comparison: {
+      salesPackage: "1 desk",
+      modelNumber: "AUR-DSK-024",
+      material: "Engineered Wood & Metal",
+      color: "White & Oak",
+      fillingMaterial: "N/A",
+      finishType: "Matte",
+      maxLoad: "100 kg",
+      origin: "Vietnam",
+      dimensions: {
+        width: "120 cm",
+        height: "75 cm",
+        depth: "60 cm",
+        weight: "20 kg",
+        seatHeight: "N/A",
+        legHeight: "72 cm",
+      },
+      warranty: {
+        summary: "1 year warranty",
+        serviceType: "Replacement",
+        covered: "Manufacturing defects",
+        notCovered: "Scratches",
+      },
+    },
+  },
 ];
-          
