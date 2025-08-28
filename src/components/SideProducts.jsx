@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
 import { asset } from "../assets/asset";
 import { ShopContext } from "../context/ShopContext";
-const SildeProducts = () => {
+const SideProducts = () => {
   const { slides } = useContext(ShopContext);
-  console.log(slides);
+  
   const [currentIndexSlide, setCurrentSlideIndex] = useState(0);
   const [currentImageSlide, setCurrentImageIndex] = useState(0);
 
@@ -109,4 +109,4 @@ const SildeProducts = () => {
   );
 };
 
-export default SildeProducts;
+export default SideProducts;

@@ -13,8 +13,10 @@ const ProductsItem = ({
 }) => {
   const { currency } = useContext(ShopContext);
   
+
+
   return (
-    <Link to={`/product/${id}`}>    
+    <Link to={`/product/${id}`}>      
       <div className="group relative">
         <div className="relative overflow-hidden aspect-[285/301]" >  
           <img  
@@ -26,7 +28,7 @@ const ProductsItem = ({
             <div className="top-[24px] right-[24px] w-[48px] h-[48px] py-[12px] pl-[5px] rounded-full bg-[#E97171] absolute font-medium text-white text-[16px]">
               -{discountprice}%
             </div>
-          )}
+          )}  
         </div>       
         <div className="flex flex-col gap-[8px] bg-[#F4F5F7] p-16px">
           <div className="flex flex-col gap-[8px]">  
@@ -44,7 +46,7 @@ const ProductsItem = ({
             </div>
           </div>
         </div>
-        <div className="absolute inset-0 bg-[#3A3A3A] white flex opacity-0 group-hover:opacity-80 ">    
+        <div className="absolute inset-0 bg-[#3A3A3A] white flex opacity-0 group-hover:opacity-80 pointer-events-none group-hover:pointer-events-auto ">    
           <div className="w-full opacity-100 group-hover:opacity-100 flex flex-col justify-center items-center gap-[24px]">
             <div className="w-[ 14.03%] py-12px px-55px bg-white font-semibold text-[16px] text-[#B88E2F]" >Add to cart</div>
             <div className="flex gap-[20px]">

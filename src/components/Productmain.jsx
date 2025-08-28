@@ -1,26 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { asset, products } from "../assets/asset";
+import { ShopContext } from "../context/ShopContext";
+ 
 const Productmain = ({ productData }) => {
+  const {addToCart} =useContext(ShopContext)
   const [image, setImage] = useState(productData.imagess?.[0]);
-  const [value, setvalue] = useState(1);
+  const {products} =useContext(ShopContext) 
+  const [value, setvalue] = useState(1);  
   const [size, setSize] = useState(productData.sizes?.[0]);
-  useEffect(() => {
+  useEffect(() => { 
     if (productData.imagess?.length > 0) {
       setImage(productData.imagess[0]);
-    }
+    } 
   }, [productData]);
-  useEffect(() => {
-    if (productData.sizes?.length > 0) {
-      setSize(productData.sizes[0]);
+  useEffect(() => { 
+    if (productData.sizes?.length > 0) {  
+      setSize(productData.sizes[0]);  
     }
-  }, [productData]);
-  const url = encodeURIComponent(window.location.href);
-  const text = encodeURIComponent(
+  }, [productData]);  
+  const url = encodeURIComponent(window.location.href); 
+  const text = encodeURIComponent( 
     `Check out this product: ${productData.title}`
-  );
-
+  ); 
   return (
-    <div className="flex items-center justify-center px-100px py-35px">
+    <div className="flex items-center justify-center px-100px py-35px"> 
       <div className="flex flex-1 gap-[31px] ">
         <div className="flex flex-col w-[10.50%] gap-[32px] ">
           {productData.imagess?.map((item, index) => (
@@ -31,16 +34,16 @@ const Productmain = ({ productData }) => {
               src={item}
             />
           ))}
-        </div>
+        </div>  
         <img className="w-[68%] rounded-[10px]" src={image} alt="" />
-      </div>
+      </div>                                             
       <div className="flex flex-1 flex-col gap-[40px]">
-        <div>
+        <div>                    
           <div>
-            <h1 className="text-[42px] ">{productData.title}</h1>
+            <h1 className="text-[42px] ">{productData.title}</h1>          
             <p className="font-medium text-[24px] text-[#9F9F9F]">
               Rs.{productData.price}
-            </p>
+            </p>     
             <div className="flex gap-[16px] mt-[15px] mb-[12px] items-center">
               <div className="flex">
                 {[...Array(5)].map((_, index) => {
@@ -106,25 +109,25 @@ const Productmain = ({ productData }) => {
                     setvalue((value) => (value > 0 ? value - 1 : 0))
                   }
                   className="cursor-pointer"
-                >
+                >  
                   -
                 </button>
                 {value}
                 <button
                   onClick={() => setvalue(value + 1)}
                   className="cursor-pointer"
-                >
-                  +
-                </button>
-              </div>
-              <div className="py-17px px-58px justify-between flex items-center border-[1px] px-[15px] border-black rounded-[10px]">
+                >  
+                  +     
+                </button>    
+              </div>  
+              <button onClick={()=>addToCart(productData.id,size)} className="py-17px px-58px justify-between flex items-center border-[1px] px-[15px] border-black rounded-[10px]">
                 Add to Cart
-              </div>
+              </button>
               <div className="py-17px px-58px justify-between flex items-center border-[1px] px-[15px] border-black rounded-[10px]">
                 + Compare
               </div>
             </div>
-          </div>
+          </div>  
         </div>
         <div className="flex flex-col gap-[40px]">
           <div className="h-[1px] w-full bg-[#D9D9D9]"></div>

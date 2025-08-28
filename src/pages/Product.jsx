@@ -5,7 +5,7 @@ import Breadcrumb from '../components/Breadcrumb';
 import Productmain from '../components/Productmain';
 import Desciption from '../components/Desciption';
 import RealatedProduct from '../components/RealatedProduct';
-  
+
 const Product = () => {  
   const {id} =useParams();
   const {products} =useContext(ShopContext) 
@@ -13,27 +13,25 @@ const Product = () => {
   const fetchProductData =async()=>{
      products.map((item)=>{
         if(item.id==id){
-          setProductData(item)
+          setProductData(item) 
           return null 
         }  
      })  
-  }
-  useEffect(()=>{
-    fetchProductData();
-  },[id])  
-       
-
+  }              
+  useEffect(()=>{                        
+    fetchProductData(); 
+  },[id])        
+                                                         
+  
   return (  
     <div>      
       <Breadcrumb productData={productData} />
-      <Productmain productData={productData} />
+      <Productmain productData={productData} /> 
       <Desciption productData={productData} />
-      <RealatedProduct productData={productData} />
-
-
-    </div>            
-  )                  
+      <RealatedProduct productData={productData} />   
+    </div>              
+  )                    
 }                   
-             
+                
 export default Product      
                          

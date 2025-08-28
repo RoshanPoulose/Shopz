@@ -6,19 +6,19 @@ const Navbar = () => {
   const [visible, setVisible] = useState(false);
   return (
     <div className="flex justify-between pt-29px pr-100px pl-54px pb-30px items-center ">
-      <div className="flex items-center  gap-1">
+      <div className="flex items-center  gap-1"> 
         <img src={asset.logo} alt="" className="w-[50px] h-[32px]" />
         <div className="font-montserrat font-bold text-[34px] "> Furniro</div>
       </div>
       {/* <ul className='hidden sm:fex gap-5 text-sm text-gray-700'></ul> */}
       <ul className="hidden lg:flex gap-[75px]">
-        <NavLink to="/" className="flex ">
+        <NavLink to="/" className="flex "> 
           <p className="font-medium text-[16px]">Home</p>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
         <NavLink to={"/shop"} className="flex gap-2">
           <p>Shop</p>
-          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" /> 
         </NavLink>
         <NavLink to={"/about"} className="flex gap-2">
           <p>About</p>
@@ -35,26 +35,29 @@ const Navbar = () => {
           alt=""  
           className="h-[28px] w-[28px] cursor-pointer"
         />
-        <img
+        <img   
           src={asset.search}
           className="h-[28px] w-[28px] cursor-pointer"
           alt=""
-        />
+        />     
         <img
           src={asset.heart}
           className="h-[28px] w-[28px] cursor-pointer"
           alt=""
         />
-        <img
+        <div className="relative">
+           <img 
           src={asset.cart}
           className="h-[28px] w-[28px] cursor-pointer"
-          alt=""
-        />
-      </div>
+          alt=""      
+        /> 
+        <div className=" w-[18px] absolute top-3.5 left-4.5 flex items-center justify-center text-[10px] rounded-full bg-black text-white h-[18px]">1</div>
+        </div>
+      </div> 
       <img
         onClick={() => {
-          setVisible(true);
-        }}
+          setVisible(true);    
+        }} 
         src={asset.menu}
         alt=""
         className="w-[50px] cursor-pointer h-[50px] lg:hidden"
@@ -63,10 +66,10 @@ const Navbar = () => {
         className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition all ${
           visible ? "w-full" : "w-0"
         }`}
-      >
+      >  
         <div className="flex flex-col text-gray-600">
           <div className="flex items-center gap-4 p-3">
-            <img
+            <img   
               onClick={() => setVisible(false)}
               src={asset.close}
               alt=""
@@ -102,7 +105,7 @@ const Navbar = () => {
             >
               Contact
             </NavLink>
-          </nav>
+          </nav>    
         </div>
         <div className="flex gap-[45px] flex-col pl-20px">
           <div className="flex gap-2 items-center">
@@ -127,7 +130,7 @@ const Navbar = () => {
               alt=""
               className="h-[28px] w-[28px] cursor-pointer"
             />
-            <h2>Favorites</h2>
+            <h2>Favorites</h2> 
           </div>
           <div className="flex gap-2 items-center">
             <img

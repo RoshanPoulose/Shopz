@@ -63,7 +63,10 @@ import li from "./img/li.png";
 import tw from "./img/tw.png";
 import sofa from "./img/sofa1.png";
 import sofa2 from "./img/sofa2.png";
-
+import location from "./img/location.png";
+import clock from "./img/clock.png";   
+import phone from "./img/phone.png"; 
+  
 export const asset = {
   logo,
   search,
@@ -120,13 +123,20 @@ export const asset = {
   li,
   tw,
   sofa,
-  sofa2
+  sofa2,location,clock,phone
 };
+export const sorts= [
+  { label: "Default", value: "default" },
+  { label: "Price: Low → High", value: "priceLowHigh" },
+  { label: "Price: High → Low", value: "priceHighLow" },
+  { label: "Name: A → Z", value: "nameAZ" },
+  { label: "Name: Z → A", value: "nameZA" }, 
+]; 
 
 export const cat = [
   {
-    name: "Categoires",
-    thing: [
+    name: "Categoires",  
+    thing: [  
       "Living",
       "Dining",
       "Outdoor",
@@ -136,18 +146,18 @@ export const cat = [
       "Office",
       "Bedroom",
       "Storage",
-    ],
+    ], 
   },
-  {
-    name: "Price",
+  {       
+    name: "Price",   
     thing: [
       { label: "Under Rp 500,000", min: 0, max: 500000 },
       { label: "Rp 500,001 - Rp 2,000,000", min: 500001, max: 2000000 },
-      { label: "Rp 2,000,001 - Rp 5,000,000", min: 2000001, max: 5000000 },
+      { label: "Rp 2,000,001 - Rp 5,000,000", min: 2000001, max: 5000000 }, 
       { label: "Rp 5,000,001 - Rp 10,000,000", min: 5000001, max: 10000000 },
       { label: "Above Rp 10,000,000", min: 10000001, max: Infinity },
     ],
-  }, 
+  },  
   {
     name:"size",
     thing:["S", "L", "XL", "XXL","M"]
@@ -201,7 +211,7 @@ export const products = [
     tags: ["Chair", "Cafe", "Living Room", "Wood", "Fabric"],
     comparison: {
       salesPackage: "1 cafe chair",
-      modelNumber: "STLCHR-001",
+      modelNumber: "STLCHR-001", 
       material: "Wood & Fabric",
       color: "White",
       fillingMaterial: "Foam",
