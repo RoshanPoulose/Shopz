@@ -10,8 +10,8 @@ const Featurebanner = () => {
           <div className="font-semibold text-[25px]">High Quality</div>
           <span className="text-[#898989] font-medium text-[20px]">
             crafted from top materials
-          </span>  
-        </div> 
+          </span>
+        </div>
       </div>
       <div className="flex gap-[10px] items-center">
         <img src={asset.guarante} alt="" />
@@ -20,27 +20,28 @@ const Featurebanner = () => {
           <span className="text-[#898989] font-medium text-[20px]">
             over 2 year
           </span>
-        </div>  
+        </div>
       </div>
       <div className="flex gap-[10px] items-center">
-        <img src={asset.shipping} alt="" />                                                                
-        <div>  
+        <img src={asset.shipping} alt="" />
+        <div>
           <div className="font-semibold text-[25px]">Free Shipping</div>
           <span className="text-[#898989] font-medium text-[20px]">
-            Order over 150 $               
-          </span> 
-        </div>  
-      </div>         
-      <div className="flex gap-[10px] items-center">    
+            Order over 150 $
+          </span>
+        </div>     
+      </div>
+      <div className="flex gap-[10px] items-center">
         <img src={asset.customersupport} alt="" />
-        <div> 
-          <div className="font-semibold text-[25px]">24/7 Support</div>
+        <div>
+          <div className="font-semibold text-[25px]">24/7 Support</div>   
           <span className="text-[#898989] font-medium text-[20px]">
-            Dedicated support
-          </span>  
-        </div>                                 
-      </div>                
-    </div>         
-  );    
-};  
+            Dedicated support    
+          </span>    
+        </div>   
+      </div>    
+    </div>     
+  );     
+};   
 export default Featurebanner;  
+  

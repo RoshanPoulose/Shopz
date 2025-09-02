@@ -7,12 +7,12 @@ import Furnitures from '../components/Furnitures'
 import Footer from '../components/Footer'
 import SideProducts from '../components/SideProducts'
 const Home = () => {
-  return (     
+  return (      
     <div>
-     <Hero />  
-     <Browser />  
-     <OurProduct />       
-     <SideProducts/>  
+     <Hero />   
+     <Browser />   
+     <OurProduct />        
+     <SideProducts/>   
      <Furnitures />             
     </div>
   )  

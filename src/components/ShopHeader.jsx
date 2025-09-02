@@ -10,7 +10,7 @@ const ShopHeader = () => {
     <div className='relative flex items-center justify-center'>
         <img className='w-full' src={asset.shop} alt="" />
         <div className='absolute flex flex-col items-center'>
-          <div className='font-medium text-[48px] '>{loc}</div>
+          <div className='font-medium text-3xl lg:text-[48px] '>{loc}</div>
           <div className='flex'>
             <div className='font-medium text-[16px]'>Home</div>  
             <img src={asset.right} alt="" />

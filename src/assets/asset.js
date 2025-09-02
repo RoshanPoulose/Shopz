@@ -17,10 +17,10 @@ import line from "./img/line.jpg";
 import bd1 from "./img/bd1.jpg";
 import bd2 from "./img/bd2.jpg";
 import bd3 from "./img/bd3.jpg";
-import dr1 from "./img/dr1.jpg";
+import dr1 from "./img/dr1.jpg";   
 import dr2 from "./img/dr2.jpg";
 import dr3 from "./img/dr3.jpg";
-import lv1 from "./img/lv1.jpg";
+import lv1 from "./img/lv1.jpg";  
 import lv2 from "./img/lv2.jpg";
 import lv3 from "./img/lv3.jpg";
 import ud1 from "./img/ud1.jpg";
@@ -66,7 +66,10 @@ import sofa2 from "./img/sofa2.png";
 import location from "./img/location.png";
 import clock from "./img/clock.png";   
 import phone from "./img/phone.png"; 
-  
+import shopclose from "./img/shopclose.png"; 
+import shopcloseicon from "./img/shopcloseicon.png"; 
+import deletes from "./img/delete.png"; 
+
 export const asset = {
   logo,
   search,
@@ -121,20 +124,20 @@ export const asset = {
   arrowblack,
   fb,
   li,
-  tw,
+  tw,    
   sofa,
-  sofa2,location,clock,phone
+  sofa2,location,clock,phone,shopclose,shopcloseicon,deletes
 };
 export const sorts= [
   { label: "Default", value: "default" },
   { label: "Price: Low → High", value: "priceLowHigh" },
-  { label: "Price: High → Low", value: "priceHighLow" },
+  { label: "Price: High → Low", value: "priceHighLow" }, 
   { label: "Name: A → Z", value: "nameAZ" },
   { label: "Name: Z → A", value: "nameZA" }, 
 ]; 
-
+ 
 export const cat = [
-  {
+  {  
     name: "Categoires",  
     thing: [  
       "Living",
@@ -189,49 +192,86 @@ export const slides = [
     images: [asset.patio, ud1, ud2, ud3],
   },
 ];
+export const compare = [
+  {
+    title: "General",
+    items: [
+      "Sales Package",
+      "Model Number",
+      "Secondary Material",
+      "Configuration",
+      "Upholstery Material",
+      "Upholstery Color"
+    ]
+  },
+  {
+    title: "Product",
+    items: [
+      "",
+      "Model Number",
+      "Secondary Material",
+      "Configuration",
+      "Upholstery Material",
+      "Upholstery Color"
+    ]
+  },
+  {
+    title: "Demension",
+    items: [
+      "",
+      "Width",
+      "Height",
+      "Depth",
+      "Weight",
+      "Seat Height",
+      "Leg Heart",
+      
+    ]
+  }
+];
 
 export const products = [
   {
     id: 1,
     title: "Syltherine",
-    category: "Living",
+    category: "Living",  
     shortDescription: "Stylish cafe chair",
     description:
       "A sleek, modern chair perfect for cafes or stylish home settings.",
     price: 2500000,
     originalPrice: 3500000,
-    discountPercent: 30,
-    imagess: [p1, p2, p3, p4],
+    discountPercent: 30, 
+    imagess: [p1, p2, p3, p4], 
     badge: "30% Off",
-    rating: 4.5,
-    reviews: 5,
+    rating: 4.5, 
+    reviews: 5,  
     sizes: ["S", "M", "L"],
     colors: ["#000000", "#7B3F00", "#D4AF37"],
-    sku: "STLCHR-001",
-    tags: ["Chair", "Cafe", "Living Room", "Wood", "Fabric"],
+    sku: "STLCHR-001", 
+    tags: ["Chair", "Cafe", "Living Room", "Wood", "Fabric"], 
     comparison: {
-      salesPackage: "1 cafe chair",
-      modelNumber: "STLCHR-001", 
+      salesPackage: "1 cafe chair", 
+      modelNumber: "STLCHR-001",   
       material: "Wood & Fabric",
-      color: "White",
-      fillingMaterial: "Foam",
+      color: "White", 
+      fillingMaterial: "Foam",      
       finishType: "Matte",
-      maxLoad: "120 kg",
-      origin: "Indonesia",
+      maxLoad: "120 kg", 
+      origin: "Indonesia", 
       dimensions: {
-        width: "50 cm",
-        height: "80 cm",
+        width: "50 cm",   
+        height: "80 cm",     
         depth: "55 cm",
-        weight: "7 kg",
+        weight: "7 kg", 
         seatHeight: "45 cm",
-        legHeight: "40 cm",
-      },
+        legHeight: "40 cm",     
+      }, 
       warranty: {
         summary: "1 year manufacturing warranty",
-        serviceType: "On-site",
+        serviceType: "On-site", 
         covered: "Manufacturing defects only",
         notCovered: "Damage due to misuse",
-      },
+      }, 
     },
   },
   {

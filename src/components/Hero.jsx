@@ -1,5 +1,6 @@
 import React from "react";
 import { asset } from "../assets/asset";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (  
@@ -14,7 +15,9 @@ const Hero = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit              
           tellus, luctus nec ullamcorper mattis.                                           
         </p>                                                                                                                    
-        <button className="mt-[46px] py-25px px-72px bg-[#B88E2F] text-white">BUY NOW</button>         
+        <Link to={'/shop'}>
+        <button className="mt-[46px] cursor-pointer py-25px px-72px bg-[#B88E2F] text-white">BUY NOW</button>
+        </Link>         
       </div>                
     </div>                                                                                                  
   );                                                 

@@ -1,11 +1,15 @@
 import React from 'react'
-
+import ShopHeader from '../components/ShopHeader'
+import CartDetail from '../components/CartDetail'
+ 
 const Cart = () => {
   return (
     <div>
-      <h1>Cart</h1>
+     <ShopHeader />
+     <CartDetail />      
     </div>
-  )
+  )  
 }
-
+  
 export default Cart
+   
